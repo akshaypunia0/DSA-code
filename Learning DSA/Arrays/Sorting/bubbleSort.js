@@ -1,9 +1,9 @@
-// Asscending order --->  In this we swap the smallest element to left
+// Asscending order --->  In this we swap the smallest element to left when comparing two elements
 
 
-const array = [25, 10, 12, 5, 11, 2];
+const array = [33, 25, 10, 12, 5, 11, 2, 1];
 
-console.log("Array without sorting", array);
+// console.log("Array without sorting", array);
 
 
 for (i = 0; i < array.length; i++) {
@@ -17,8 +17,6 @@ for (i = 0; i < array.length; i++) {
         }
 
     }
-
-    console.log(array);
 
 }
 
