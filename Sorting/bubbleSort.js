@@ -8,15 +8,17 @@ console.log("Array without sorting", array);
 
 for (i = 0; i < array.length; i++) {
 
-    for (j = i + 1; j < array.length; j++) {
+    for (j = 0; j < array.length; j++) {
 
-        if (array[i] > array[j]) {
+        if (array[j] > array[j + 1]) {
             let temp = array[j];
-            array[j] = array[i];
-            array[i] = temp;
+            array[j] = array[j + 1];
+            array[j + 1] = temp;
         }
 
     }
+
+    console.log(array);
 
 }
 
