@@ -5,10 +5,27 @@
 // Increment the large integer by one and return the resulting array of digits.
 
 
-const array = [1, 2, 3];
+const array = [9, 9, 9, 1];
 
 const plusOne = (digits) => {
 
-    
+    let end = digits.length-1;
+
+    for(let i=end; i>=0; i--) {
+        if(digits[i] < 9) {
+            digits[i]++;
+            return digits;
+        }
+
+        else if(digits[i] == 9) {
+            digits[i] = 0;
+        }
+    }
+
+    digits.unshift(1);
+
+    return digits;
+
 }
 
+console.log(plusOne(array));
