@@ -1,6 +1,6 @@
 // Problem: Find the Second Largest Element in an Array
 
-
+const array = [23, 23, 7, -34, 9, 55, 6, 66, 66, 1]
 
 const secondLargeNumber = (array) => {
     let largestNumber = -Infinity
@@ -18,17 +18,14 @@ const secondLargeNumber = (array) => {
             secondLargest = largestNumber;
             largestNumber = array[i];
         }
-        else if (array[i] > secondLargest) {
+        else if (array[i] > secondLargest && largestNumber != array[i]) {
             secondLargest = array[i];
         }
 
     }
 
-    return secondLargest == -Infinity ? null : console.log("Second largest number is: ", secondLargest);
+    return secondLargest 
     
-
 }
-// const array = [23, 23, 7, -34, 9, 55, 6, 66, 1]
-secondLargeNumber([23, 23, 7, -34, 9, 55, 6, 66, 1])
 
-
+console.log(secondLargeNumber(array));
