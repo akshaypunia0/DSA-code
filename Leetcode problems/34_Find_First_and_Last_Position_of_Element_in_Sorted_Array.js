@@ -32,7 +32,7 @@
 
 
 // const array = [5,7,7,8,8,10];
-const array = []
+const array = [1];
 
 function searchRange(array, target) {
 
@@ -84,8 +84,16 @@ function searchRange(array, target) {
     let first = findFirst(array, target);
     let last = findLast(array, target);
 
-    return first && last ? [first, last] : [-1, -1]
+    console.log("First: ", first);
+    console.log("Last: ", last);
+
+    if(first !== undefined && last !== undefined) {
+        return [first, last]
+    }
+    else return [-1, -1]
+
+    // return first && last ? [first, last] : [-1, -1]
 }
 
 
-console.log(searchRange(array, 0));
+console.log(searchRange(array, 1));
